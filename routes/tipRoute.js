@@ -11,7 +11,7 @@ tipRoute.get('/tip/:total/:tipPercentage', (req, res) =>{
 let total= Number(req.params.total)
 let tipPercentage = Number(req.params.tipPercentage)
 console.log(total, tipPercentage)
-res.status(200).json({tips: `${total} % ${tipPercentage}`})
+res.status(200).json({tips: total/tipPercentage})
 })
 
 module.exports = tipRoute
